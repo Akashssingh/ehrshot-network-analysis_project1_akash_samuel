@@ -1,0 +1,88 @@
+# --------------------
+#  Data Files
+# --------------------
+data/EHRShot_sampled_2000patients/
+*.csv
+*.tsv
+*.xlsx
+*.hdf5
+*.h5
+*.gz
+*.zip
+*.tar
+*.tar.gz
+
+# --------------------
+#  Figures and Outputs
+# --------------------
+figures/
+plots/
+outputs/
+*.png
+*.jpg
+*.jpeg
+*.pdf
+*.svg
+
+# --------------------
+#  Python Cache & Logs
+# --------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+*.tmp
+*.bak
+
+# --------------------
+#  Environments
+# --------------------
+# Local or temporary virtualenvs
+venv/
+env/
+.venv/
+ehrshot_env_*/
+ehrshot_env_*/*
+
+# Conda environments
+*.conda
+*.yaml
+*.yml
+
+# --------------------
+#  OS-specific
+# --------------------
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux temp files
+*~
+
+# --------------------
+#  IDEs and Editors
+# --------------------
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+*.kate-swp
+*.code-workspace
+
+# --------------------
+#  Temporary Virtualenvs Created by run.py
+# --------------------
+ehrshot_env_*/
+tmp_venv*/
+tmp_env*/
+tmp_env/
+tmp_venv/

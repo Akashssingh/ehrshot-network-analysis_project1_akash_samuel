@@ -1,0 +1,6 @@
+pandas
+numpy
+tqdm
+matplotlib
+networkx>=3.4
+python-louvain
