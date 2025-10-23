@@ -8,11 +8,11 @@
 
 Since the data may contain sensitive patient information, it is not shared on github repository. It is taken as granted that the user has downloaded the EHRShot_sampled_2000patients data.
 
-It is highly recommended to not change the names of the files unziped from downloaded EHRShot data
+It is highly recommended to not change the names of the files unziped from downloaded EHRShot data.
 
 In the root directory, you should have src folder and a data folder containing EHRShot_sampled_2000patients repository. Cloned repo do not come with data folder.
 
-The congif.py script figures out the directory path issues but the names of the files must be as expected. 
+The config.py script figures out the directory path issues but the names of the files must be as expected. 
 
 Data stored in -> data/EHRShot_sampled_2000patients/
 EHRShot_sampled_2000patients directory must have 
@@ -26,6 +26,7 @@ export EHRSHOT_DATA_DIR=/path/to/your/EHRShot_sampled_2000patients
 ```
 
 However, it is highly recommended to align your data to the cloned repo. Downloaded repo is the root directory, make relocate data as data/EHRShot_sampled_2000patients in it.
+
 Clone the repository and run the pipeline with a **single command**:
 
 ```bash
