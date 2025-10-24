@@ -31,6 +31,7 @@ However, it is highly recommended to align your data to the cloned repo. Downloa
 Clone the repository and run the pipeline with a **single command**:
 
 ```bash
+git clone https://github.com/Akashssingh/ehrshot-network-analysis_project1_akash_samuel.git
 cd ehrshot-network-analysis_project1_akash_samuel
 python3 run.py
 ```
