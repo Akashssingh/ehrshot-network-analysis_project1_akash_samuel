@@ -526,36 +526,6 @@ print_table(
     top_global[[label_col,"betweenness","degree","weighted_degree"]],
 )
 
-# ---------- [Global] Community meta-graph + table
-from collections import Counter as _Counter, defaultdict as _DD
-counts = _Counter(comm_id_of.values())
-comm_sizes = pd.DataFrame(sorted(counts.items()), columns=["community_id","size"]).sort_values("size", ascending=False)
-
-meta = nx.Graph()
-for cid, size in counts.items():
-    meta.add_node(cid, size=size)
-
-cross_w = _DD(int)
-for u, v, data in G.edges(data=True):
-    cu, cv = comm_id_of[u], comm_id_of[v]
-    if cu != cv:
-        cross_w[tuple(sorted((cu,cv)))] += data.get("weight", 1)
-for (a,b), w in cross_w.items():
-    meta.add_edge(a, b, weight=w)
-
-pos = nx.spring_layout(meta, weight="weight", seed=42)
-sizes = [200 + 20*meta.nodes[c]["size"]**0.5 for c in meta.nodes()]
-weights = [meta[a][b]["weight"] for a,b in meta.edges()]
-plt.figure(figsize=(10,8))
-nx.draw_networkx_nodes(meta, pos, node_size=sizes)
-nx.draw_networkx_edges(meta, pos, width=[w**0.3 for w in weights], alpha=0.6)
-nx.draw_networkx_labels(meta, pos, font_size=10)
-plt.title("Global: Community meta-graph (node size = community size; edge width = cross-community ties)")
-plt.axis("off")
-savefig_safe("global_community_metagraph.png")
-
-print_table("[Global] Community sizes", comm_sizes)
-
 # ---------- [Pregnancy] Prep named tables
 nodes_preg_plot = nodes_preg_named.copy()
 label_col_preg = "diagnosis_label"
