@@ -20,9 +20,9 @@ EHRShot_sampled_2000patients directory must have
      - sampled_condition_occurrence.csv
      - concept.csv
 
-If you do not want to download or relocate data, then you may manually direct the path to your data directory containing the CSV files (respective csv files names must be same as required by program) by commands below. 
+If you do not want to download or relocate data, then you may manually direct the path to your data directory containing the CSV files (respective CSV file names must be the same as required by the program) by using the commands below. 
 
-Unix based systems linux or MacOS
+Unix-based systems, Linux, or macOS
 ```bash
 export EHRSHOT_DATA_DIR=/path/to/your/EHRShot_sampled_2000patients 
 ```
@@ -35,11 +35,11 @@ To confirm the path was set
 echo $env:EHRSHOT_DATA_DIR
 ```
 
-However, it is highly recommended to align your data to the cloned repo. Downloaded repo is the root directory, relocate your data folder as data/EHRShot_sampled_2000patients in it. If after setting environment variable using above command, the program run gives error, then you must set a data folder in cloned repo and in that data folder copy and paste the EHRShot_sampled_2000patients folder.
+However, it is highly recommended to align your data to the cloned repo. Downloaded repo is the root directory, relocate your data folder as data/EHRShot_sampled_2000patients in it. If after setting environment variable using above command, the program runs and gives an error, then you must set a data folder in the cloned repo, and in that data folder, copy and paste the EHRShot_sampled_2000patients folder.
 
 Clone the repository and run the pipeline with a **single command**:
 
-The below commands are for unix based systems and should work on Linux/MacOS. Windows users should run the run.py using the IDE run functioanlity or use the respective windows cli commands for running this pyscript in your IDE terminal. Use a bash or a zsh terminal in IDE (recommended). 
+The commands below are for Unix-based systems and should work on Linux/MacOS. Windows users should run the run.py using the IDE run functionality or use the respective Windows CLI commands for running this script in your IDE terminal. Use a bash or a zsh terminal in an IDE (recommended). 
 
 ```bash
 git clone https://github.com/Akashssingh/ehrshot-network-analysis_project1_akash_samuel.git
