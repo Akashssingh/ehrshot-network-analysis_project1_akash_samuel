@@ -20,15 +20,26 @@ EHRShot_sampled_2000patients directory must have
      - sampled_condition_occurrence.csv
      - concept.csv
 
-If you do not want to download or relocate data, then you may manually direct the path to your root directory containing the CSV files by command below. 
+If you do not want to download or relocate data, then you may manually direct the path to your data directory containing the CSV files (respective csv files names must be same as required by program) by commands below. 
 
+Unix based systems linux or MacOS
 ```bash
 export EHRSHOT_DATA_DIR=/path/to/your/EHRShot_sampled_2000patients 
 ```
 
-However, it is highly recommended to align your data to the cloned repo. Downloaded repo is the root directory, make relocate data as data/EHRShot_sampled_2000patients in it.
+Windows
+```powershell
+$env:EHRSHOT_DATA_DIR = "C:\path\to\EHRShot_sampled_2000patients"
+
+To confirm the path was set
+echo $env:EHRSHOT_DATA_DIR
+```
+
+However, it is highly recommended to align your data to the cloned repo. Downloaded repo is the root directory, relocate your data folder as data/EHRShot_sampled_2000patients in it.
 
 Clone the repository and run the pipeline with a **single command**:
+
+The below commands are for unix based systems and should work on Linux/MacOS. Windows users should run the run.py using the IDE run functioanlity or use the respective windows cli commands for running this pyscript in your IDE terminal. Use a bash or a zsh terminal in IDE (recommended). 
 
 ```bash
 git clone https://github.com/Akashssingh/ehrshot-network-analysis_project1_akash_samuel.git
