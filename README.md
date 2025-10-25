@@ -35,7 +35,7 @@ To confirm the path was set
 echo $env:EHRSHOT_DATA_DIR
 ```
 
-However, it is highly recommended to align your data to the cloned repo. Downloaded repo is the root directory, relocate your data folder as data/EHRShot_sampled_2000patients in it.
+However, it is highly recommended to align your data to the cloned repo. Downloaded repo is the root directory, relocate your data folder as data/EHRShot_sampled_2000patients in it. If after setting environment variable using above command, the program run gives error, then you must set a data folder in cloned repo and in that data folder copy and paste the EHRShot_sampled_2000patients folder.
 
 Clone the repository and run the pipeline with a **single command**:
 
